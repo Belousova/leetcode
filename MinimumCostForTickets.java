@@ -6,11 +6,7 @@ class Solution {
         int last = 0;
         for (int i=1; i< dp.length; i++) {
             if (i < days[last]) {
-                if (i>1) {
-                    dp[i] = dp[i-1];
-                } else {
-                    dp[i] = 0;
-                }
+                dp[i] = dp[i-1];
             } 
             if (i==days[last]) {
                 //travel this day
